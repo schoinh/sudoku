@@ -25,26 +25,20 @@ describe ('RowChecker', function (){
 
     var row2 = new Row([1,2,3,4,5,6,7,8,9]);
     row2.checkLegal();
-    expect(row2.legal).toEqual(true); 
+    expect(row2.legal).toEqual(true);
+  });
+
+  it('should check that numbers do not repeat', function(){
+    var row1 = new Row([1,2,3,4,5,5,7,8,9]);
+    row1.checkLegal();
+    row1.checkRepeat();
+    expect(row1.legal).toEqual(false); 
+
+    var row2 = new Row([1,2,3,4,5,6,7,8,9]);
+    row2.checkLegal();
+    row2.checkRepeat();
+    expect(row2.legal).toEqual(true);
   })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

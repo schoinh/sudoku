@@ -4,7 +4,6 @@ export function Row (numbers) {
 }
 
 Row.prototype.checkLegal = function() {
-  debugger;
   if (this.numbers.length !== 9) {
     this.legal = false;
   } else {
@@ -14,6 +13,14 @@ Row.prototype.checkLegal = function() {
       } else {
         this.legal = true;
       }
+    }
+  }
+}
+
+Row.prototype.checkRepeat = function() {
+  for (var i = 0; i < this.numbers.length; i++) {
+    if (this.numbers.indexOf(this.numbers[i]) !== this.numbers.lastIndexOf(this.numbers[i])) {
+      return this.legal = false;
     }
   }
 }
