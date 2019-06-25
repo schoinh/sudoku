@@ -49,5 +49,33 @@ describe ('RowChecker', function (){
     expect(board.rows.length).toEqual(2)
   })
 
+  it('should test if there are 9 rows in the board', function() {
+    var board = new Board();
+    var row1 = new Row([1,2,3,4,5,6,7,8,9]);
+    var row2 = new Row([1,2,4,3,5,6,7,8,9]);
+    board.addRow(row1);
+    board.addRow(row2);
+    board.countRows();
+    expect(board.legal).toEqual(false);
+  })
+
+  it('should test if all rows are legal in the board', function(){
+    var board = new Board();
+    var row1 = new Row([1,2,3,4,9,9,7,8,9]);
+    var row2 = new Row([1,2,4,3,5,6,7,8,9]);
+    board.addRow(row1);
+    board.addRow(row2);
+    board.legal = true;
+    board.rowLegal();
+    expect(board.legal).toEqual(false);
+
+
+
+
+
+  })
+
+
+
 
 });

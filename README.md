@@ -17,6 +17,7 @@ On this web site, the user can choose toppings, crust, and a size for one or mor
 | **If specs 2 & 3 are met than the row is legal** | 2 == true && 3 == true | true |
 | **Add rows to board** | ????? | ??? |
 | **Verify there are 9 rows** | ????? | ??? |
+| **Check that all rows legal ** | ALL legal == true | ???? |
 | **If all rows && columns are legal, you win! ** | ALL == true | win == true, Way Go! |
 
 ## Setup/Installation Requirements
