@@ -8,13 +8,12 @@ Row.prototype.checkLegal = function() {
   if (this.numbers.length !== 9) {
     this.legal = false;
   } else {
-    this.legal = true;
-    // for (i = 0; i < this.numbers.length; i++) {
-    //   if (this.numbers[i] < 1 || this.numbers[i] > 9) {
-    //     return this.legal = false;
-    //   } else {
-    //     this.legal = true;
-    //   }
-    // }
+    for (var i = 0; i < this.numbers.length; i++) {
+      if (this.numbers[i] < 1 || this.numbers[i] > 9) {
+        return this.legal = false;
+      } else {
+        this.legal = true;
+      }
+    }
   }
 }
