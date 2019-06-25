@@ -15,6 +15,8 @@ On this web site, the user can choose toppings, crust, and a size for one or mor
 | **Checks that the numbers are <= 9** | 2-10 | false |
 | **Checks that numbers in array are unique** | 1,2,3,3,4,5,6,7,8 | false |
 | **If specs 2 & 3 are met than the row is legal** | 2 == true && 3 == true | true |
+| **Add rows to board** | ????? | ??? |
+| **Verify there are 9 rows** | ????? | ??? |
 | **If all rows && columns are legal, you win! ** | ALL == true | win == true, Way Go! |
 
 ## Setup/Installation Requirements

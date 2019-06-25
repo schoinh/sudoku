@@ -1,4 +1,4 @@
-import { Row } from './../src/backend-code.js';
+import { Row, Board } from './../src/backend-code.js';
 
 describe ('RowChecker', function (){
 
@@ -32,7 +32,7 @@ describe ('RowChecker', function (){
     var row1 = new Row([1,2,3,4,5,5,7,8,9]);
     row1.checkLegal();
     row1.checkRepeat();
-    expect(row1.legal).toEqual(false); 
+    expect(row1.legal).toEqual(false);
 
     var row2 = new Row([1,2,3,4,5,6,7,8,9]);
     row2.checkLegal();
@@ -40,7 +40,14 @@ describe ('RowChecker', function (){
     expect(row2.legal).toEqual(true);
   })
 
-
+  it('should add additional rows onto a board', function(){
+    var board = new Board();
+    var row1 = new Row([1,2,3,4,5,6,7,8,9]);
+    var row2 = new Row([1,2,4,3,5,6,7,8,9]);
+    board.addRow(row1);
+    board.addRow(row2);
+    expect(board.rows.length).toEqual(2)
+  })
 
 
 });
